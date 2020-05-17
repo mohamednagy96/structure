@@ -22,12 +22,12 @@ class SocialController extends Controller
             auth('admin')->login($existUser);
             return redirect(url('admin'));
         }
-       $admin= Admin ::create([
+       $existUser= Admin ::create([
             'name'=>$user->getName(),
             'email'=>$user->getEmail(),
             'password'=>bcrypt('admin123')
         ]);
-        auth('admin')->login($admin);
+        auth('admin')->login($existUser);
         return redirect(url('admin'));
     }
 }
