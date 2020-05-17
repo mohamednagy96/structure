@@ -63,3 +63,4 @@ Route::resource('languages', 'LanguageController')->except('show');
  * customers
  */
 Route::resource('customers','CustomerController');
+

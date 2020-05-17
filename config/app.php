@@ -178,6 +178,7 @@ return [
         App\Providers\ViewComponentServiceProvider::class,
         App\Providers\CacheServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
     ],
 
@@ -231,7 +232,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
-
+        'socialite'=>Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

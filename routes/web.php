@@ -27,6 +27,9 @@ Route::post('admin/logout', 'Admin\Auth\LoginController@logout')->name('admin.lo
 
 
 
+Route::get('redirect/{service}','Admin\SocialController@redirect');
+Route::get('callback/{service}','Admin\SocialController@callback');
+
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 

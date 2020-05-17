@@ -29,5 +29,23 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    
+    'facebook' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_CLIEBT_KEY'),
+        'redirect' => env('FACEBOOK_REDIRECT'),
+    ],
+
+    'github' => [
+        'client_id' => env('GITHUB_CLIENT_ID'),
+        'client_secret' => env('GITHUB_CLIENT_KEY'),
+        'redirect' => env('GITHUB_REDIRECT'),
+    ],
+
+    'google' => [
+        'client_id' => env('GO_CLIENT_ID'),
+        'client_secret' => env('GO_CLIENT_KEY'),
+        'redirect' => env('GO_REDIRECT'),
+    ],
 
 ];

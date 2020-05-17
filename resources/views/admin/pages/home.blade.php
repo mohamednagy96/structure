@@ -1,7 +1,7 @@
 @extends('admin.layouts.master', ['breadcrumb' => 'home'])
 
 @section('content')
-<div class="row">
+{{-- <div class="row">
     <div class="col-lg-3 col-xs-6">
       <!-- small box -->
       <div class="small-box bg-aqua">
@@ -62,5 +62,5 @@
       </div>
     </div>
     <!-- ./col -->
-  </div>
+  </div> --}}
 @endsection
