@@ -1,0 +1,9 @@
+@import '../../node_modules/bootstrap3/dist/css/bootstrap.css';
+@import './adminlte-general.scss';
+@import '../../node_modules/admin-lte/dist/css/adminlte.css';
+@import '../../node_modules/admin-lte/dist/css/skins/_all-skins.min.css';
+
+.form-group > label {
+    text-align: right;
+    text-transform: capitalize;
+}
