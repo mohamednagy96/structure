@@ -20,16 +20,14 @@ class SocialController extends Controller
         $existUser=Admin::whereEmail($user->getEmail())->first();
         if($existUser){
             auth('admin')->login($existUser);
-            return redirect(url('admin/'));
+            return redirect(url('admin'));
         }
-        Admin ::create([
+       $admin= Admin ::create([
             'name'=>$user->getName(),
             'email'=>$user->getEmail(),
             'password'=>bcrypt('admin123')
         ]);
-        auth('admin')->login($existUser);
-        $id=auth('admin')->user()->id;
-        dd($id);
-        return redirect(url('admin/{}'));
+        auth('admin')->login($admin);
+        return redirect(url('admin'));
     }
 }
