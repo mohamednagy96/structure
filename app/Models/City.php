@@ -11,9 +11,4 @@ class City extends Model
     public function country(){
         return $this->belongsTo(Country::class);
     }
-
-
-    public function address(){
-        return $this->hasMany(UserAddress::class,'city_id');
-    }
 }

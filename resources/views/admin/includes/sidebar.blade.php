@@ -16,7 +16,12 @@
 
             <li class="header">Dashboard</li>
 
-            @can('orders_list')
+            <li>
+                <a href="{{route('admin.posts.index')}}">
+                  <i class="fa fa-paperclip"></i> <span>{{ __('Posts') }}</span>
+                </a>
+              </li>
+            {{-- @can('orders_list')
             <li>
               <a href="{{route('admin.orders.index')}}">
                 <i class="fa fa-paperclip"></i> <span>{{ __('orders') }}</span>
@@ -47,7 +52,7 @@
                     <i class="fa fa-paperclip"></i> <span>{{ __('Customers') }}</span>
                 </a>
             </li>
-            @endcan
+            @endcan --}}
             {{-- @can('address_list')
             <li>
                 <a href="{{ route('admin.address.index') }}">

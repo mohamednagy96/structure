@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Comment;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -30,5 +31,13 @@ class Admin extends Authenticatable
         }else{
             $this->attributes['password'];
         }
+    }
+    public function posts(){
+        return $this->hasMany(Post::class,'admin_id');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class, 'admin_id');
     }
 }

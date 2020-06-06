@@ -18,6 +18,10 @@ Route::resource('admin_users', 'AdminUserController')->except(['show']);
  * roles
  */
 Route::resource('roles', 'RoleController')->except(['show']);
+/**
+ * Post
+ */
+Route::resource('posts', 'PostController');
 
 
 /**
@@ -64,3 +68,8 @@ Route::resource('languages', 'LanguageController')->except('show');
  */
 Route::resource('customers','CustomerController');
 
+
+/**
+ * comments
+ */
+Route::resource('comments','CommentController');

@@ -31,7 +31,7 @@ trait DashboardRedirects{
         $route = $route ? $route : $this->redirectRoute();
 
         if($route){
-            $redirect = redirect()->route($route, $params)->with('success', __('alerts.update'));
+            $redirect = redirect()->route($route, $params)->with('success', __('update'));
         }
 
         return $redirect;
@@ -47,7 +47,7 @@ trait DashboardRedirects{
         $route = $route ? $route : $this->redirectRoute();
 
         if($route){
-            $redirect = redirect()->route($route, $params)->with('success', __('alerts.delete'));
+            $redirect = redirect()->route($route, $params)->with('success', __('delete'));
         }
 
         return $redirect;

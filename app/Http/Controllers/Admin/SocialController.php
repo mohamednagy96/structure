@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Response;
 use Laravel\Socialite\Facades\Socialite;
 
 class SocialController extends Controller
@@ -15,9 +18,9 @@ class SocialController extends Controller
     }
 
     public function callback($service){
-        // dd('sa');
         $user = Socialite::driver($service)->Stateless()->user();
-        $existUser=Admin::whereEmail($user->getEmail())->first();
+        // dd($user);
+         $existUser=Admin::whereEmail($user->getEmail())->first();
         if($existUser){
             auth('admin')->login($existUser);
             return redirect(url('admin'));

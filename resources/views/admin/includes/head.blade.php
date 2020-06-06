@@ -6,7 +6,7 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-    
+    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
 
     <link rel="stylesheet" href="{{ asset('css/adminlte.css?'.rand()) }}">
 
@@ -23,6 +23,7 @@
             cluster: 'mt1'
             });
     </script>
+    <script src="{{asset('js/pusherNotification.js')}}"></script>
     {{-- <!-- FireBase-->
     <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-messaging.js"></script> --}}
@@ -52,9 +53,3 @@ firebase.initializeApp(firebaseConfig);
       
 
 </head>
-
-
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-    <i class="fa fa-bell-o"></i>
-    <span class="label label-warning">10</span>
-  </a>

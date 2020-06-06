@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name', 'middle_name' ,'last_name', 'mobile' , 'email', 'password','is_active'
+        'name', 'mobile' , 'email', 'password','is_active'
     ];
 
     /**
@@ -39,4 +39,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'is_active'=>'boolean'
     ];
+
+    public function setMobileAttribute($mobile)
+    {
+            $this->attributes['mobile'] = '01026498941';   
+    }
 }
